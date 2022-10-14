@@ -1,0 +1,15 @@
+Scanner in = new Scanner(System.in);
+    System.out.println("ingresa tu nombre: ");
+    String nombre=in.next();
+    System.out.println("ingresa tu edad: ");
+    String edad=in.next();
+    System.out.println(nombre + ", tu edad(entero) : " +edad);
+    System.out.println("ingrese nota1:");
+    float nota1= in.nextFloat();
+    //ingresa valor decimal por teclado en consola
+    boolean pregunta = nota1>=10.5;
+    //estructura condicional si 
+    if(pregunta)
+        System.out.println("estas aprobado");
+    else
+        System.out.println("estas desaprobado");
