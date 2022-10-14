@@ -1,4 +1,4 @@
-canner in = new Scanner(System.in);
+Scanner in = new Scanner(System.in);
     System.out.println("ingresa tu nombre: ");
     String nombre=in.next();
     System.out.println("ingresa tu edad: ");
@@ -7,7 +7,7 @@ canner in = new Scanner(System.in);
     System.out.println("ingrese nota1:");
     //ingresa valor decimal por teclado en consola
     float nota1= in.nextFloat();
-    if(nota1<0 || nota1>20){
+    if(!(nota1>0 && nota1<21)){
         System.out.println("solo valotres de 0 a 20:");
         nota1=in.nextFloat();
     }
