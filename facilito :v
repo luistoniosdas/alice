@@ -1,0 +1,43 @@
+package aplicacion_2;
+import java.util.Scanner;
+public class practica_java {
+    public static void main(String[] args) {
+             boolean bandera = false;
+             double Total=0 ;
+        System.out.println("=========BOLETA DE VENTA==========");
+        System.out.println("Ingrese su nombre: ");
+        Scanner tem = new Scanner(System.in);
+        String nombre = tem.next();
+        do {            
+             System.out.println("ingrese producto: ");
+            String Producto = tem.next();
+        
+            System.out.println("ingrese cantidad: ");
+            int cantidad = tem.nextInt();
+            //declara variable cantidad como un numero entero
+            System.out.println("ingrese precio: ");
+            double Precio = tem.nextDouble();
+
+            double Subtotal=Math.round((cantidad*Precio)*100.0)/100.0;
+            System.out.println("Subtotal="+Subtotal);
+            
+            Total=Total+Subtotal;
+            
+            System.out.println("Desea otro producto?.ingrese(S) para si o (N) para no");
+            String pregunta = tem.next();
+       //instruccion seleccion Si, si escribo n ,entonces
+       //cambia valor a variable bandera = falso
+            if ("N".equals(pregunta)||"n".equals(pregunta)){
+                bandera = false;
+                
+            } else {
+            }
+            //fin de instruccion mienrtras bandera sea = verdadero
+            //y si es falso se sale
+        } while (bandera);
+        System.out.println("Total a pagar"+Total);
+        System.out.println("fin del programa");
+        
+    }
+    
+}
