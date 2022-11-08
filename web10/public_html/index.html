@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EJEMPLO PAGINA WEB</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="estilos.css" rel="stylesheet" type="text/css"/>
+        <script>
+            var visible=false;
+            function iniciar(){
+                var elemento=document.getElementById("menu-img");
+                elemento.addEventListener("click",mostrarMenu)
+            
+            }
+            function mostrarMenu(){
+                var elemento= document.getElementById("menu")
+                if(!visible){
+                    elemento.style.display="block";
+                visible=true;
+            }else{
+                elemento.style.display="none";
+                visible=false;
+            }
+        }
+    window.addEventListener("load",iniciar);
+        </script>
+    </head>
+    <body>
+        <header id="cabeceralogo">
+            <div><h1>Titulo de la pagina</h1></div>
+        </header>
+        <nav id="micono"></nav>
+        <img src="micono.PNG" width="35" height="28" id="menu-img">
+        <nav id="menu">
+            <div><ul id="listamenu">
+                    <li><a href="index.html">Principal</a></li>
+                    <li><a href="Fotos.html">Fotos</a>
+                        <ul>
+                            <li><a href="familia.html">Familia</a></li>
+                            <li><a href="vacaciones.html">Vacaciones</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="Videos.html">Videos</a></li>
+                    <li><a href="Contacto.html">Contactos</a></li>
+                </ul>
+            </div>
+        </nav>
+        <main>
+                <div><section id="articulo">
+                        <article class="class">
+                            <h1>Primer articulo</h1>
+                            <time datetime="2022-11-07" pubdate>
+                                <div class="numerodia">11</div>
+                                <div class="nombredia">lunes</div>
+                            </time>
+                            <p>Este es el texto demi primer articulo</p>
+                            <figure>
+                                <img src="laptop1.jpg" alt=""/>
+                            </figure>
+                        </article> 
+                        <article class="class">
+                            <h1>Segundo articulo</h1>
+                            <time datetime="2022-13-07" pubdate>
+                                <div class="numerodia">13</div>
+                                <div class="nombredia">miercoles</div>
+                            </time>
+                            <p>Este es el texto de mi segundo articulo</p>
+                            <figure>
+                                <img src="teclado.jpg" alt=""/>
+                            </figure>
+                        </article>
+                        
+                </section>
+                    <aside id="infoadicional">
+                        <h1>Informacion personal</h1>
+                        <p>Cita del articulo uno</p>
+                        <p>Cita del articulo dos</p>
+                    </aside>
+                    <div class="recuperar">Recuperar</div>
+                </div>
+        </main>
+        <footer id="pielogo">
+                    <div>
+                    <section class="seccionpie">
+                            <h1>Sitio Web</h1>
+                            <p><a href="index.html">Principal</a></p>
+                            <p><a href="Fotos.html">Fotos</a></p>
+                            <p><a href="Videos.html">Videos</a></p>
+                    </section>
+                    <section class="seccionpie">
+                            <h1>Ayuda</h1>
+                            <p><a href="Contacto.html">Contacto</a></p>
+                    </section>
+                        
+                    <section class="seccionpie">
+                            <address>Juliaca, Puno, Peru</address>
+                            <small>&copy; Derechos Reservados 2022</small>
+                    </section>
+                        
+                    <div class="recuperar">Recuperar</div>
+                    </div>
+        </footer>
+            
+    </body>
+</html>
