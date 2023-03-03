@@ -1,0 +1,26 @@
+class Persona():
+    def __init__(self, nombre):
+        self.nombre = nombre
+    def obtenerSueldo(self, cater, hx,dt):
+        print("Categoria: ",cater)
+        int(hx)
+        int(dt)
+        if cater == "A" :
+            print("Descuento por tardanza : ", (int(dt)*(12.5/60))("Pago Hora Extra  : ", (int(hx)*12.5))("Sueldo Neto : ",3000+(int(hx)*12.5)-(int(dt)*(12.5/60))))
+            return "Sueldo : 3000".format(cater)
+        elif cater == "B":
+            print("Descuento por tardanza : ", (int(dt)*(10.4/60)))
+            print("Pago Hora Extra  : ", (int(hx)*10.4))
+            print("Sueldo Neto : ",2500+(int(hx)*10.4)-(int(dt)*(10.4/60)))
+            return "Sueldo : 2500".format(cater)
+        elif cater == "C":
+            print("Descuento por tardanza : ", (int(dt)*(8.3/60)))
+            print("Pago Hora Extra : ", (int(hx)*8.3))
+            print("Sueldo Neto : ",2000+(int(hx)*8.3)-(int(dt)*(8.3/60)))
+            return "Sueldo : 2000".format(cater)
+        else:
+            print("La categoria no existe")
+person = Persona(input("Ingre Nombre: "), input("ingre categoria: "))
+print("***BOLETA DE PAGO***")
+print("NOMBRE: ", person.nombre)
+print(person.obtenerSueldo(input("Ingrese Categoria: "), input("Ingrese HorEx: "), input("Ingrese tardanza(min): ")))
